@@ -12,6 +12,8 @@
 
 #include "include/http_request.hpp"
 #include "include/http_response.hpp"
+#include "include/http_status_codes.hpp"
+
 #include "include/config.hpp"
 
 
@@ -45,7 +47,7 @@ int main() {
         std::vector<std::string> request_lines;
         boost::split(request_lines, request_string, boost::is_any_of("\r\n"));
 
-        http::Response response = http::Response::create_response(200, "OK");
+        http::Response response = http::Response::create_response(http::HTTP_RESPONSE_STATUS_200_OK, "OK");
         response.add_body("server", "C++ Server");
         response.add_body("connection", "close");
 

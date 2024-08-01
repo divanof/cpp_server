@@ -35,9 +35,7 @@ namespace http {
         }
         return request;
     }
-    // std::string http::Request::get_method() const { return method; }
-    // std::string Request::get_path() const { return path; }
-    // std::string Request::get_version() const { return version; }
+
     void Request::print_request()
     {
         std::cout << "Method: " << method << std::endl;
