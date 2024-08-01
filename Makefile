@@ -5,10 +5,10 @@ INCLUDE_DIR = include
 SRC_DIR = src
 
 # Define the source files
-SRCS = main.cpp $(SRC_DIR)/http_request.cpp
+SRCS = main.cpp $(wildcard $(SRC_DIR)/*.cpp)
 
 # Define the object files in the build directory
-OBJS = $(BUILD_DIR)/main.o $(BUILD_DIR)/http_request.o
+OBJS = $(patsubst $(SRC_DIR)/%.cpp, $(BUILD_DIR)/%.o, $(SRCS))
 
 # Define the executable
 EXEC = $(BIN_DIR)/main

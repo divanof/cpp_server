@@ -10,6 +10,7 @@
 #include <unistd.h>
 
 #include "include/http_request.hpp"
+#include "include/http_response.hpp"
 
 
 int main() {
