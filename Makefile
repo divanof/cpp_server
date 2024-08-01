@@ -15,7 +15,7 @@ EXEC = $(BIN_DIR)/main
 
 # Define the compiler and flags
 CXX = g++
-CXX_FLAGS = -Wall -Wextra -Werror -std=c++17 -I$(INCLUDE_DIR)
+CXX_FLAGS = -Wall -Wextra -Werror -O2 -std=c++17 -I$(INCLUDE_DIR)
 
 # Define the build rules
 all: $(EXEC)
